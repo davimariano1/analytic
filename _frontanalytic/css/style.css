@@ -1,0 +1,875 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  font-size: 100%;
+  overflow-x: hidden;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+  z-index: 1000;
+  border-bottom: 2px solid #0032512d;
+}
+
+.header-image {
+  height: 72px;
+}
+
+.header-menu {
+  display: flex;
+  gap: 40px;
+}
+
+.header-menu-item {
+  color: #064d79;
+  font-weight: bolder;
+  font-size: 20px;
+  position: relative;
+  text-decoration: none;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.header-menu-item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background-color: #00c2e086;
+  transform: scaleX(0);
+  transform-origin: center left;
+  transition: transform 0.3s;
+}
+
+.header-menu-item:hover::after {
+  transform: scaleX(1);
+  transform-origin: center right;
+  background-color: #00c2e086;
+}
+
+.content {
+  margin-bottom: 48px;
+  border-top: 1px solid #003251;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.main-content-text {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  font-size: 18px;
+  padding: 80px;
+  align-items: center;
+  text-align: center;
+}
+
+.main-content-text p {
+  line-height: 1.5;
+}
+
+.main-content-title {
+  font-weight: 400;
+  font-size: 64px;
+  color: #003251;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s, transform 1s;
+  margin-top: 50px;
+}
+
+.no-animation {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.main-content-subtitle {
+  font-weight: 400;
+  color: #011624;
+  padding: 20px;
+}
+
+.main-content-button {
+  background-color: #ffffff;
+  width: 350px;
+  height: 60px;
+  border: none;
+  box-shadow: 8px 8px 10px rgba(36, 23, 16, 0.534);
+  border-radius: 20px;
+  font-weight: bolder;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f0003c;
+  text-decoration: none;
+}
+
+.help-button {
+  color: #f0003c;
+  text-decoration: none;
+}
+
+.main-content-button:hover {
+  transform: scale(1.2);
+  transition: 2s;
+}
+
+.main-content-image {
+  max-width: 30%;
+  height: auto;
+  box-shadow: 8px 8px 12px 8px rgba(36, 23, 16, 0.534);
+  margin-right: 40px;
+  border-radius: 30px;
+}
+
+.secondary-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  margin-top: 48px;
+  line-height: 2;
+  background-image: url("../img/7.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.secondary-content-title {
+  border-top: 1px solid #f0003c;
+  margin-top: 10px;
+  padding-top: 48px;
+  font-weight: 400;
+  font-size: 24px;
+  color: #011624;
+}
+
+.secondary-content-paragraph {
+  font-weight: 300;
+  font-size: 18px;
+  color: #011624;
+}
+
+.secondary-content-features {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.secondary-content-features li::before {
+  content: "\f00c"; /* Código do ícone de check no FontAwesome */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: #00cc00; /* Cor verde para o ícone de check */
+  margin-right: 8px;
+}
+
+.icon-section {
+  text-align: center;
+  padding: 150px;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.icon {
+  flex: 1;
+  margin: 0 10px;
+  position: relative;
+}
+
+.icon p {
+  text-align: center;
+  margin-top: 5px;
+  font-weight: bolder;
+  font-size: 18px;
+  color: #003251;
+}
+
+.icon img {
+  max-width: 100%;
+  cursor: pointer;
+  box-shadow: 12px 6px 16px 6px #064d793b;
+  border-radius: 50%;
+  padding: 16px;
+}
+
+.icon img:hover {
+  box-shadow: 12px 6px 16px 6px #064d799a;
+}
+
+.contract-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.contract-content-wrapper {
+  display: flex;
+  flex-direction: row; /* Certifica-se de que os elementos estejam dispostos horizontalmente */
+  justify-content: space-between; /* Coloca espaço entre o parágrafo e a imagem */
+  align-items: center; /* Alinha verticalmente os elementos */
+  gap: 20px; /* Espaçamento entre o parágrafo e a imagem */
+}
+
+.contract-content-text {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  font-size: 18px;
+  padding: 80px;
+  align-items: center;
+  text-align: center;
+}
+
+.contract-content-image {
+  max-width: 30%; /* Ajuste o tamanho da imagem conforme necessário */
+  height: auto;
+  box-shadow: 8px 8px 12px 8px rgba(36, 23, 16, 0.534);
+  border-radius: 30px;
+  margin-right: 40px;
+}
+
+.contract-content-text p {
+  line-height: 1.5;
+  color: #011624;
+}
+
+.contract-content-subtitle {
+  font-weight: bolder;
+  color: #011624;
+}
+
+.contact-section {
+  text-align: center;
+  padding: 20px;
+  background-image: url("../img/12.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.contact-form-title {
+  font-size: 26px;
+  margin-top: 20px;
+  color: #011624;
+  font-weight: bolder;
+}
+
+.highlighted-text {
+  color: #f0003c;
+  font-weight: bolder;
+  font-size: 30px;
+}
+
+.contact-section-title {
+  font-weight: bolder;
+  font-size: 24px;
+  color: #003251;
+  margin-bottom: 16px;
+}
+
+.contact-content {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  gap: 200px; /* Adiciona um espaçamento entre as duas partes */
+  margin-top: 30px; /* Adiciona um espaçamento acima do container */
+}
+
+.contact-form {
+  text-align: left;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column; /* Alterado para exibir os elementos um abaixo do outro */
+  align-items: center; /* Removido para alinhar verticalmente */
+  flex-wrap: wrap;
+}
+
+.contact-info-item {
+  margin: 10px;
+}
+
+.contact-info-item img {
+  max-width: 30px; /* Ajuste o tamanho da imagem conforme necessário */
+}
+
+.follow-us h3 {
+  margin-top: 40px;
+  padding: 10px;
+}
+
+.follow-us a {
+  margin: 1px;
+}
+
+.contact-info-item p {
+  font-size: 16px;
+  color: #011624;
+  font-weight: bolder;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 400;
+  font-size: 18px;
+  color: #011624;
+  margin-bottom: 8px;
+  font-weight: bolder;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 200%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.contact-button {
+  background-color: #f0003c;
+  color: #ffffff;
+  border: none;
+  padding: 12px 20px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.contact-button:hover {
+  background-color: #ffffff;
+  color: #f0003c;
+  border: 1px solid #f0003c;
+  font-weight: bolder;
+  transition: 0.3s;
+}
+
+.follow-us a img {
+  width: 30px;
+  margin: 0 10px;
+}
+
+.footer {
+  background: url("../img/novasimg\ \(10\).png") center/cover no-repeat;
+}
+
+.footer img {
+  width: 160px;
+}
+
+.footer-content {
+  text-align: center;
+  margin: 14px;
+  color: #011624;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.icon-footer {
+  display: inline-block;
+  margin: 5px;
+}
+
+.icon-footer img {
+  width: 25px;
+  height: 25px;
+  transition: transform 0.3s;
+}
+
+.icon-footer:hover img {
+  transform: scale(1.2);
+}
+
+.footer-divider {
+  height: 2px;
+  background-color: #003251;
+  width: 100%;
+}
+
+.copy {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 0;
+}
+
+/*Estilos para o botão do whatsapp*/
+
+#whatsapp-button {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.9s ease-in-out;
+}
+
+#whatsapp-button img {
+  width: 60px;
+  height: 60px;
+}
+
+#whatsapp-button img:hover {
+  transform: scale(1.1);
+}
+
+/* Estilos para a barra de rolagem*/
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #003251;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f5f5f5;
+}
+
+body {
+  scrollbar-color: #003251 #f5f5f5;
+}
+
+/*Responsividade */
+
+/* Estilos para telas com largura máxima de 480px */
+
+@media only screen and (max-width: 480px) {
+  body {
+    font-size: 90%; /* Reduz a fonte geral para melhor ajuste em telas menores */
+    padding: 100px 50px;
+  }
+
+  .header {
+    flex-direction: column; /* Altera o layout do cabeçalho para empilhar em telas menores */
+    padding: 10px 20px; /* Reduz o espaçamento do cabeçalho */
+  }
+
+  .header-menu {
+    flex-direction: column; /* Empilha os itens do menu em telas menores */
+    gap: 10px; /* Adiciona espaço entre os itens do menu */
+  }
+
+  .header-menu-item {
+    font-size: 16px; /* Reduz o tamanho da fonte dos itens do menu */
+  }
+
+
+  .main-content {
+    flex-direction: column; /* Empilha o conteúdo principal em telas menores */
+  }
+
+  .main-content-text {
+    padding: 40px; /* Reduz o espaçamento interno do texto principal */
+  }
+
+  .main-content-title {
+    font-size: 36px; /* Reduz o tamanho da fonte do título principal */
+    margin-top: 20px; /* Ajusta o espaçamento superior do título principal */
+  }
+
+  .main-content-subtitle {
+    font-size: 18px; /* Reduz o tamanho da fonte do subtítulo principal */
+    padding: 10px; /* Reduz o espaçamento interno do subtítulo principal */
+  }
+
+  .main-content-button {
+    width: 250px; /* Reduz a largura do botão principal */
+    height: 50px; /* Reduz a altura do botão principal */
+    font-size: 16px; /* Reduz o tamanho da fonte do botão principal */
+  }
+
+  .main-content-image {
+    max-width: 100%; /* Garante que a imagem principal não ultrapasse a largura da tela */
+    margin: 20px 0; /* Adiciona espaço acima e abaixo da imagem principal */
+  }
+
+  .secondary-content-title {
+    padding-top: 20px; /* Ajusta o espaçamento superior do título secundário */
+    font-size: 20px; /* Reduz o tamanho da fonte do título secundário */
+  }
+
+  .icon-container{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .icon-section {
+    padding: 80px 20px; /* Reduz o espaçamento interno da seção de ícones */
+    
+  }
+
+  .icon img {
+    padding: 8px; /* Reduz o espaçamento interno das imagens dos ícones */
+  }
+
+  .contact-section {
+    padding: 20px 10px; /* Reduz o espaçamento interno da seção de contato */
+  }
+
+  .contact-form-title {
+    font-size: 22px; /* Reduz o tamanho da fonte do título do formulário de contato */
+    margin-top: 10px; /* Ajusta o espaçamento superior do título do formulário de contato */
+  }
+
+  .contact-content {
+    flex-direction: column; /* Empilha os elementos de contato em telas menores */
+    gap: 20px; /* Adiciona espaço entre os elementos de contato */
+  }
+
+  .contact-info-item p {
+    font-size: 14px; /* Reduz o tamanho da fonte das informações de contato */
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%; /* Faz com que os campos de entrada ocupem 100% da largura disponível */
+  }
+
+.contract-content-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contract-content-image{
+  max-width: 70%;
+  margin-bottom: 40px;
+}
+
+  .contract-content-text {
+    padding: 40px; /* Reduz o espaçamento interno do texto do contrato */
+  }
+
+  .contract-content-subtitle {
+    font-size: 20px; /* Reduz o tamanho da fonte do subtítulo do contrato */
+  }
+
+  .footer-divider{
+   width: 100vw;
+  }
+
+  .footer-content {
+    font-size: 12px; /* Reduz o tamanho da fonte do conteúdo do rodapé */
+    line-height: 1.3; /* Ajusta o espaçamento entre linhas do conteúdo do rodapé */
+    margin: 10px; /* Ajusta a margem do conteúdo do rodapé */
+  }
+
+  #whatsapp-button {
+    padding-right: 50px;
+    bottom: 20px; /* Ajusta a posição do botão do WhatsApp na parte inferior da tela */
+    right: 20px; /* Ajusta a posição do botão do WhatsApp à direita da tela */
+  }
+}
+
+/* Estilos para telas com largura entre 481px e 768px */
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  body {
+    font-size: 95%; /* Reduz a fonte geral para melhor ajuste em telas médias */
+  }
+
+  .header {
+    padding: 10px 20px; /* Reduz o espaçamento do cabeçalho */
+  }
+
+  .header-menu {
+    gap: 10px; /* Adiciona espaço entre os itens do menu */
+  }
+
+  .header-menu-item {
+    font-size: 18px; /* Ajusta o tamanho da fonte dos itens do menu */
+  }
+
+  .main-content-text {
+    padding: 40px; /* Reduz o espaçamento interno do texto principal */
+  }
+
+  .main-content-title {
+    font-size: 48px; /* Reduz o tamanho da fonte do título principal */
+    margin-top: 30px; /* Ajusta o espaçamento superior do título principal */
+  }
+
+  .main-content-subtitle {
+    font-size: 20px; /* Reduz o tamanho da fonte do subtítulo principal */
+    padding: 15px; /* Reduz o espaçamento interno do subtítulo principal */
+  }
+
+  .main-content-button {
+    width: 300px; /* Reduz a largura do botão principal */
+    height: 55px; /* Ajusta a altura do botão principal */
+    font-size: 18px; /* Reduz o tamanho da fonte do botão principal */
+  }
+
+  .main-content-image {
+    max-width: 50%; /* Ajusta a largura máxima da imagem principal */
+    margin: 30px 0; /* Adiciona espaço acima e abaixo da imagem principal */
+  }
+
+  .secondary-content-title {
+    padding-top: 30px; /* Ajusta o espaçamento superior do título secundário */
+    font-size: 22px; /* Reduz o tamanho da fonte do título secundário */
+  }
+  
+  .icon-container{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .icon-section {
+    padding: 100px 20px; /* Reduz o espaçamento interno da seção de ícones */
+  }
+
+  .icon img {
+    padding: 10px; /* Reduz o espaçamento interno das imagens dos ícones */
+  }
+
+  .contact-form-title {
+    font-size: 24px; /* Reduz o tamanho da fonte do título do formulário de contato */
+    margin-top: 15px; /* Ajusta o espaçamento superior do título do formulário de contato */
+  }
+
+  .contract-content-text {
+    padding: 40px; /* Reduz o espaçamento interno do texto do contrato */
+  }
+
+  .contract-content-subtitle {
+    font-size: 22px; /* Reduz o tamanho da fonte do subtítulo do contrato */
+  }
+
+  .footer-content {
+    font-size: 14px; /* Reduz o tamanho da fonte do conteúdo do rodapé */
+    line-height: 1.4; /* Ajusta o espaçamento entre linhas do conteúdo do rodapé */
+    margin: 14px; /* Ajusta a margem do conteúdo do rodapé */
+  }
+
+  #whatsapp-button {
+    bottom: 20px; /* Ajusta a posição do botão do WhatsApp na parte inferior da tela */
+    right: 20px; /* Ajusta a posição do botão do WhatsApp à direita da tela */
+    padding-right: 70px;
+  }
+}
+
+/* Estilos para telas com largura entre 769px e 1024px */
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  body {
+    font-size: 100%; /* Retorna à fonte padrão para telas médias */
+  }
+
+  .header {
+    padding: 15px 40px; /* Ajusta o espaçamento do cabeçalho */
+  }
+
+  .header-menu {
+    gap: 20px; /* Aumenta o espaço entre os itens do menu */
+  }
+
+  .header-menu-item {
+    font-size: 20px; /* Ajusta o tamanho da fonte dos itens do menu */
+  }
+
+  .main-content-text {
+    padding: 60px; /* Aumenta o espaçamento interno do texto principal */
+  }
+
+  .main-content-title {
+    font-size: 64px; /* Aumenta o tamanho da fonte do título principal */
+    margin-top: 40px; /* Ajusta o espaçamento superior do título principal */
+  }
+
+  .main-content-subtitle {
+    font-size: 24px; /* Aumenta o tamanho da fonte do subtítulo principal */
+    padding: 20px; /* Aumenta o espaçamento interno do subtítulo principal */
+  }
+
+  .main-content-button {
+    width: 400px; /* Aumenta a largura do botão principal */
+    height: 70px; /* Ajusta a altura do botão principal */
+    font-size: 24px; /* Aumenta o tamanho da fonte do botão principal */
+  }
+
+  .main-content-image {
+    max-width: 40%; /* Ajusta a largura máxima da imagem principal */
+    margin: 40px 0; /* Adiciona espaço acima e abaixo da imagem principal */
+  }
+
+  .secondary-content-title {
+    padding-top: 40px; /* Ajusta o espaçamento superior do título secundário */
+    font-size: 28px; /* Aumenta o tamanho da fonte do título secundário */
+  }
+
+  .icon-section {
+    padding: 120px 40px; /* Aumenta o espaçamento interno da seção de ícones */
+  }
+
+  .icon img {
+    padding: 12px; /* Aumenta o espaçamento interno das imagens dos ícones */
+  }
+
+  .contact-form-title {
+    font-size: 28px; /* Aumenta o tamanho da fonte do título do formulário de contato */
+    margin-top: 20px; /* Ajusta o espaçamento superior do título do formulário de contato */
+  }
+
+  .contract-content-text {
+    padding: 60px; /* Aumenta o espaçamento interno do texto do contrato */
+  }
+
+  .contract-content-subtitle {
+    font-size: 28px; /* Aumenta o tamanho da fonte do subtítulo do contrato */
+  }
+
+  .footer-content {
+    font-size: 16px; /* Aumenta o tamanho da fonte do conteúdo do rodapé */
+    line-height: 1.5; /* Ajusta o espaçamento entre linhas do conteúdo do rodapé */
+    margin: 20px; /* Ajusta a margem do conteúdo do rodapé */
+  }
+
+  #whatsapp-button {
+    bottom: 30px; /* Ajusta a posição do botão do WhatsApp na parte inferior da tela */
+    right: 30px; /* Ajusta a posição do botão do WhatsApp à direita da tela */
+  }
+}
+
+/* Estilos para telas do computador all in one */
+
+@media only screen and (min-width: 1920px) {
+  .header {
+    padding: 25px 80px; /* Ajusta o espaçamento do cabeçalho */
+  }
+
+  .header-menu {
+    gap: 40px; /* Aumenta o espaço entre os itens do menu */
+  }
+
+  .header-menu-item {
+    font-size: 24px; /* Ajusta o tamanho da fonte dos itens do menu */
+  }
+
+  .main-content-text {
+    padding: 100px; /* Aumenta o espaçamento interno do texto principal */
+  }
+
+  .main-content-title {
+    font-size: 100px; /* Aumenta o tamanho da fonte do título principal */
+    margin-top: 150px; /* Ajusta o espaçamento superior do título principal */
+  }
+
+  .main-content-subtitle {
+    font-size: 32px; /* Aumenta o tamanho da fonte do subtítulo principal */
+    padding: 30px; /* Aumenta o espaçamento interno do subtítulo principal */
+  }
+
+  .main-content-button {
+    width: 500px; /* Aumenta a largura do botão principal */
+    height: 90px; /* Ajusta a altura do botão principal */
+    font-size: 32px; /* Aumenta o tamanho da fonte do botão principal */
+  }
+
+  .main-content-image {
+    max-width: 60%; /* Ajusta a largura máxima da imagem principal */
+    margin: 60px 40px; /* Adiciona espaço acima e abaixo da imagem principal */
+  
+  }
+
+  .secondary-content-title {
+    padding-top: 150px; /* Ajusta o espaçamento superior do título secundário */
+    font-size: 36px; /* Aumenta o tamanho da fonte do título secundário */
+  }
+
+  .icon-section {
+    padding: 180px 80px; /* Aumenta o espaçamento interno da seção de ícones */
+  }
+
+  .icon img {
+    padding: 18px; /* Aumenta o espaçamento interno das imagens dos ícones */
+  }
+
+  .contact-form-title {
+    font-size: 36px; /* Aumenta o tamanho da fonte do título do formulário de contato */
+    margin-top: 40px; /* Ajusta o espaçamento superior do título do formulário de contato */
+  }
+
+  .contact-section {
+    text-align: center;
+    padding: 0; /* Remova o preenchimento da seção */
+    height: 100vh; /* Faça a seção ocupar 100% da altura da viewport */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .contact-form-title {
+    font-size: 26px;
+    margin-top: 0; /* Remova a margem superior */
+    color: #011624;
+    font-weight: bolder;
+   
+  }
+
+  .contact-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 200px;
+    margin-top: 0; /* Remova a margem superior */
+  }
+
+  .contract-content-text {
+    padding: 100px; /* Aumenta o espaçamento interno do texto do contrato */
+  }
+
+  .contract-content-subtitle {
+    font-size: 36px; /* Aumenta o tamanho da fonte do subtítulo do contrato */
+  }
+
+  .footer-content {
+    font-size: 13px; /* Aumenta o tamanho da fonte do conteúdo do rodapé */
+    line-height: 1.7; /* Ajusta o espaçamento entre linhas do conteúdo do rodapé */
+    margin: 8px; /* Ajusta a margem do conteúdo do rodapé */
+    
+  }
+
+  #whatsapp-button {
+    bottom: 50px; /* Ajusta a posição do botão do WhatsApp na parte inferior da tela */
+    right: 50px; /* Ajusta a posição do botão do WhatsApp à direita da tela */
+  }
+}
