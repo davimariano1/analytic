@@ -154,7 +154,7 @@ body {
   gap: 18px;
   margin-top: 48px;
   line-height: 2;
-  background-image: url("../img/7.png");
+  background-image: url("./7.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -272,7 +272,7 @@ body {
 .contact-section {
   text-align: center;
   padding: 20px;
-  background-image: url("../img/12.png");
+  background-image: url("./12.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -384,7 +384,7 @@ body {
 }
 
 .footer {
-  background: url("../img/novasimg\ \(10\).png") center/cover no-repeat;
+  background: url("./novasimg\ \(10\).png") center/cover no-repeat;
 }
 
 .footer img {

@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
@@ -9,19 +10,19 @@
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <title main-title>Analytic CompStat</title>
-    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <link rel="stylesheet" type="text/css" href="{% static './style.css' %}" />
   </head>
 
   <body>
     <header class="header">
       <img
         class="header-image"
-        src="/img/LogoTransparente (3).png"
+        src="{% static '/LogoTransparente (3).png' %}"
         alt="Logo da empresa onde o símbolo é um escudo"
       />
 
       <nav class="header-menu">
-        <a class="header-menu-item" href="index.html">Home</a>
+        <a class="header-menu-item" href="https://www.analyticcompstat.com.br">Home</a>
         <a class="header-menu-item" href="#contact">Contato</a>
       </nav>
     </header>
@@ -45,7 +46,7 @@
             <a class="help-button" href="#contact">Como podemos te ajudar?</a>
           </button>
         </div>
-        <img class="main-content-image" src="./img/Capturar3.JPG" alt="" />
+        <img class="main-content-image" src="{% static './Capturar3.JPG' %}" alt="" />
       </section>
 
       <section class="secondary-content">
@@ -66,19 +67,19 @@
       <section class="icon-section">
         <div class="icon-container">
           <div class="icon">
-            <img src="./img/agil.png" alt="Ícone 1" />
+            <img src="{% static './agil.png' %}" alt="Ícone 1" />
             <p>Agilidade</p>
           </div>
           <div class="icon">
-            <img src="./img/confiar.png" alt="Ícone 2" />
+            <img src="{% static './confiar.png' %}" alt="Ícone 2" />
             <p>Compromisso</p>
           </div>
           <div class="icon">
-            <img src="./img/livro.png" alt="Ícone 3" />
+            <img src="{% static './livro.png' %}" alt="Ícone 3" />
             <p>Ética</p>
           </div>
           <div class="icon">
-            <img src="./img/qualidade.png" alt="Ícone 4" />
+            <img src="{% static './qualidade.png' %}" alt="Ícone 4" />
             <p>Qualidade</p>
           </div>
         </div>
@@ -112,7 +113,7 @@
         href="https://api.whatsapp.com/send?phone=5531982701525"
         target="_blank"
       >
-        <img src="./img/whatsapp button.png" alt="WhatsApp Icon" />
+        <img src="{% static './whatsapp button.png' %}" alt="WhatsApp Icon" />
       </a>
     </div>
 
@@ -124,11 +125,11 @@
       <div class="contact-content">
         <div class="contact-info">
           <div class="contact-info-item">
-            <img src="./img/telefone.png" alt="Telefone" />
+            <img src="{% static './telefone.png' %}" alt="Telefone" />
             <p>(31) 3327-2711</p>
           </div>
           <div class="contact-info-item">
-            <img src="./img/o-email.png" alt="Email" />
+            <img src="{% static './o-email.png' %}" alt="Email" />
             <p>contato@softmig.com</p>
           </div>
           <div class="follow-us">
@@ -138,19 +139,20 @@
               rel="noopener noreferrer"
               href="https://www.instagram.com/sejasoftmig/"
             >
-              <img src="./img/instagram footer.png" alt="Instagram" />
+              <img src="{% static './instagram footer.png' %}" alt="Instagram" />
             </a>
             <a
               target="_blank"
               rel="noopener noreferrer"
               href="http://linkedin.com/company/softmig-software-e-telecomunicacoes"
             >
-              <img src="./img/linkedin footer.png" alt="LinkedIn" />
+              <img src="{% static './linkedin footer.png' %}" alt="LinkedIn" />
             </a>
           </div>
         </div>
         <div class="contact-form">
-          <form>
+          <form method="POST">
+            {% csrf_token %}
             <div class="form-group">
               <label for="name">Nome:</label>
               <input type="text" id="name" name="name" required />
@@ -191,7 +193,7 @@
           <a class="help-button" href="#contact">Como podemos te ajudar?</a>
         </button>
       </div>
-      <img class="contract-content-image" src="./img/maosdadas.jpg" alt="" />
+      <img class="contract-content-image" src="{% static './maosdadas.jpg' %}" alt="" />
       </div>
     </section>
 
@@ -199,7 +201,7 @@
       <div class="footer-divider"></div>
       <div class="footer-content">
         <img
-          src="./img/LogoTransparente (3).png"
+          src="{% static './LogoTransparente (3).png' %}"
           alt="Logo da empresa onde o símbolo é um escudo"
         />
         <h4>Este é um produto:</h4>
@@ -218,21 +220,21 @@
             target="_blank"
             rel="noopener noreferrer"
             href="https://www.instagram.com/sejasoftmig/"
-            ><img src="./img/instagram footer.png" alt="logo instagram"
+            ><img src="{% static './instagram footer.png' %}" alt="logo instagram"
           /></a>
           <a
             class="icon-footer"
             target="_blank"
             rel="noopener noreferrer"
             href="https://api.whatsapp.com/send?phone=553132182710"
-            ><img src="./img/whatsapp footer.png" alt="logo whatsapp"
+            ><img src="{% static './whatsapp footer.png' %}" alt="logo whatsapp"
           /></a>
           <a
             class="icon-footer"
             target="_blank"
             rel="noopener noreferrer"
             href="http://linkedin.com/company/softmig-software-e-telecomunicacoes"
-            ><img src="./img/linkedin footer.png" alt="logo linkedin"
+            ><img src="{% static './linkedin footer.png' %}" alt="logo linkedin"
           /></a>
         </section>
         <p class="copy">
@@ -241,6 +243,6 @@
       </div>
     </footer>
 
-    <script src="./javascript/index.js"></script>
+    <script src="{% static './index.js' %}"></script>
   </body>
 </html>

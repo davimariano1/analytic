@@ -57,7 +57,7 @@ ROOT_URLCONF = 'analytic.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'SistemaSeguranca'],
+        'DIRS': [BASE_DIR / 'frontanalytic'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -120,9 +120,9 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'SistemaSeguranca/css'),
-    os.path.join(BASE_DIR, 'SistemaSeguranca/img'),
-    os.path.join(BASE_DIR, 'SistemaSeguranca/javascript'),
+    os.path.join(BASE_DIR, 'frontanalytic/css'),
+    os.path.join(BASE_DIR, 'frontanalytic/img'),
+    os.path.join(BASE_DIR, 'frontanalytic/javascript'),
 ]
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 CORS_ORIGIN_ALLOW_ALL = True
