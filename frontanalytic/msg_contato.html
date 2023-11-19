@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Ferramenta para gerenciamento de segurança pública"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title main-title>Analytic CompStat</title>
+    <link rel="stylesheet" type="text/css" href="{% static './style.css' %}" />
+  </head>
+
+  <body>
+    <header class="header">
+      <img
+        class="header-image"
+        src="{% static '/LogoTransparente (3).png' %}"
+        alt="Logo da empresa onde o símbolo é um escudo"
+      />
+
+      <nav class="header-menu">
+        <a class="header-menu-item" href="https://www.analyticcompstat.com.br">Home</a>
+        <a class="header-menu-item" href="#contact">Contato</a>
+      </nav>
+    </header>
+
+    <main class="content">
+      <section class="main-content">
+        <div class="main-content-text">
+          <h1 class="main-content-title">Analytic CompStat</h1>
+          <h2 class="main-content-subtitle">
+            Obrigado! Um consultor entrará em contato o quanto antes.<br />
+          </h2>
+        </div>
+      </section>
+    </main>
+
+    <script src="{% static './index.js' %}"></script>
+  </body>
+</html>

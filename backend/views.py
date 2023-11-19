@@ -1,5 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
+from django.core.mail import send_mail
 
 from .models import Contato
 
@@ -11,6 +12,19 @@ def index(request):
         mensagem = request.POST.get('message')
         contato = Contato(nome=nome, telefone=telefone, mensagem=mensagem)
         contato.save()
-        return HttpResponse("Obrigado! Um consultor irá entrar em contato o quanto antes.")
+        send_mail(
+            f'Analytic Compstat - Novo Contato de e-mail',
+            f""" 
+            Olá, Você rcebeu um novo contato pelo site do Analytic Compstat.
+
+            Nome: {nome}
+            Telefone: {telefone}
+            E-mail: {email}
+            Mensagem: {mensagem}
+            """,
+            'davimariano@gmail.com',
+            ['davimariano@gmail.com']
+            )
+        return render(request, 'msg_contato.html')
     else:
         return render(request, 'index.html') 
