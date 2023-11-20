@@ -22,8 +22,8 @@ def index(request):
             E-mail: {email}
             Mensagem: {mensagem}
             """,
-            'davimariano@gmail.com',
-            ['davimariano@gmail.com']
+            'comercial@softmig.com',
+            ['comercial@softmig.com']
             )
         return render(request, 'msg_contato.html')
     else:
