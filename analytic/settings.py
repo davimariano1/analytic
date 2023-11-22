@@ -1,11 +1,9 @@
 """
 Configurações do Django para o projeto Analytic.
-
 Credenciais para User Admin
 
 user: softmig
 pass: Mig@1234
-
 """
 
 from pathlib import Path
@@ -20,12 +18,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = r'django-insecure-8maldxucn(#+p-tru4sfb3wvjdl5==$w=nsrr^%ih%)*d-n)(w'
+SECRET_KEY = 'django-insecure-8maldxucn(#+p-tru4sfb3wvjdl5==$w=nsrr^%ih%)*d-n)(w'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.1.26']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -75,12 +73,32 @@ WSGI_APPLICATION = 'analytic.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+
+##################### UTILIZADO EM AMBIENTE DE DESENVOLVIMENTO #############
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+########################## UTILIZADO EM PRODUÇÃO ############################
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'mssql',
+        'NAME': 'analytic',
+        'USER': 'sa',
+        'PASSWORD': 'S1g0R@2022!',
+        'HOST': 'RaimundoServer',
+        'PORT': '',
+        'OPTIONS': {
+            'driver': 'ODBC Driver 17 for SQL Server',
+        },
     }
 }
+
 
 
 # Password validation
@@ -123,7 +141,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'frontanalytic/img'),
     os.path.join(BASE_DIR, 'frontanalytic/javascript'),
 ]
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATIC_ROOT = BASE_DIR / 'static'
 CORS_ORIGIN_ALLOW_ALL = True
 
 # Default primary key field type

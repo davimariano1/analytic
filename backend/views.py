@@ -10,7 +10,7 @@ def index(request):
         telefone = request.POST.get('phone')
         email = request.POST.get('email')
         mensagem = request.POST.get('message')
-        contato = Contato(nome=nome, telefone=telefone, mensagem=mensagem)
+        contato = Contato(nome=nome, telefone=telefone, mensagem=mensagem, email=email)
         contato.save()
         send_mail(
             f'Analytic Compstat - Novo Contato de e-mail',

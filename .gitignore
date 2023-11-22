@@ -1,0 +1,6 @@
+analytic.mdf
+static/
+wfastcgi.log
+analytic_log.ldf
+venv/
+.gitignore
