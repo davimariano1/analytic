@@ -24,7 +24,7 @@ SECRET_KEY = 'django-insecure-8maldxucn(#+p-tru4sfb3wvjdl5==$w=nsrr^%ih%)*d-n)(w
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -95,7 +95,7 @@ DATABASES = {
         'HOST': config('DB_HOST'),
         'PORT': '',
         'OPTIONS': {
-            'driver': 'ODBC Driver 17 for SQL Server',
+            'driver':'ODBC Driver 17 for SQL Server',
         },
     }
 }

@@ -9,20 +9,21 @@
       content="Ferramenta para gerenciamento de segurança pública"
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <title main-title>Analytic CompStat</title>
+    <title class="icon" main-title>Analytic CompStat</title>
     <link rel="stylesheet" type="text/css" href="{% static './style.css' %}" />
   </head>
 
   <body>
     <header class="header">
+      <a href="https://www.analyticcompstat.com">
       <img
         class="header-image"
         src="{% static '/LogoTransparente (3).png' %}"
         alt="Logo da empresa onde o símbolo é um escudo"
       />
-
+    </a>
       <nav class="header-menu">
-        <a class="header-menu-item" href="https://www.analyticcompstat.com.br">Home</a>
+        <a class="header-menu-item" href="https://www.analyticcompstat.com">Home</a>
         <a class="header-menu-item" href="#contact">Contato</a>
       </nav>
     </header>
@@ -124,10 +125,7 @@
       </div>
       <div class="contact-content">
         <div class="contact-info">
-          <div class="contact-info-item">
-            <img src="{% static './telefone.png' %}" alt="Telefone" />
-            <p>(31) 3327-2711</p>
-          </div>
+
           <div class="contact-info-item">
             <img src="{% static './o-email.png' %}" alt="Email" />
             <p>contato@softmig.com</p>
