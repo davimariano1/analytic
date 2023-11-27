@@ -1,9 +1,10 @@
 """
 Configurações do Django para o projeto Analytic.
 Credenciais para User Admin
-
+rota: /admin
 user: softmig
 pass: Mig@1234
+
 """
 
 from pathlib import Path
@@ -87,11 +88,11 @@ WSGI_APPLICATION = 'analytic.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'mssql',
-        'NAME': 'analytic',
-        'USER': 'sa',
-        'PASSWORD': 'S1g0R@2022!',
-        'HOST': 'RaimundoServer',
+        'ENGINE': config('DB_ENGINE'),
+        'NAME': config('DB_NAME'),
+        'USER': config('DB_USER'),
+        'PASSWORD': config('DB_PASSWORD'),
+        'HOST': config('DB_HOST'),
         'PORT': '',
         'OPTIONS': {
             'driver': 'ODBC Driver 17 for SQL Server',
