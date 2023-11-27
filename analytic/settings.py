@@ -22,9 +22,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-8maldxucn(#+p-tru4sfb3wvjdl5==$w=nsrr^%ih%)*d-n)(w'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['www.analyticcompstat.com', 'www.analyticcompstat.com.br']
+ALLOWED_HOSTS = ['www.analyticcompstat.com', 'www.analyticcompstat.com.br', '127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -85,20 +85,27 @@ WSGI_APPLICATION = 'analytic.wsgi.application'
 # }
 
 ########################## UTILIZADO EM PRODUÇÃO ############################
-
-DATABASES = {
+if DEBUG:
+    DATABASES = {
     'default': {
-        'ENGINE': config('DB_ENGINE'),
-        'NAME': config('DB_NAME'),
-        'USER': config('DB_USER'),
-        'PASSWORD': config('DB_PASSWORD'),
-        'HOST': config('DB_HOST'),
-        'PORT': '',
-        'OPTIONS': {
-            'driver':'ODBC Driver 17 for SQL Server',
-        },
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+        }
     }
-}
+else:
+    DATABASES = {
+            'default': {
+                'ENGINE': config('DB_ENGINE'),
+                'NAME': config('DB_NAME'),
+                'USER': config('DB_USER'),
+                'PASSWORD': config('DB_PASSWORD'),
+                'HOST': config('DB_HOST'),
+                'PORT': '',
+                'OPTIONS': {
+                    'driver':'ODBC Driver 17 for SQL Server',
+                },
+            }
+        }
 
 
 
