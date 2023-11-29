@@ -8,9 +8,11 @@
       name="description"
       content="Ferramenta para gerenciamento tático da segurança pública"
     />
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <title class="icon" main-title>Analytic CompStat</title>
     <link rel="stylesheet" type="text/css" href="{% static './style.css' %}" />
+    <!--link rel="stylesheet" type="text/css" href="{% static '/reset.css' %}"-->
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="{% static './jquery.mask.min.js' %}"></script>
     <script src="{% static './index.js' %}"></script>
@@ -196,17 +198,19 @@
       </div>
     </section>
     
-    <div class="footer-divider"></div>
+
 
     <footer class="footer">
+      <div class="footer-divider"></div>
       <div class="footer-content-global">
-        <div class="">
+        <div class="footer-content"></div>
+        <div class="footer-content">
           <h4>Um produto:</h4>
           <img src="{% static './softmig_logo.png' %}" alt="logo softmig"
             />
         </div>
         
-        <div class="">
+        <div class="footer-content">
           <h4>Contato</h4>
           <section class="social-media">
             <a
@@ -233,15 +237,14 @@
           </section>
           <p>Email: contato@analyticcompstat.com</p>
         </div>
+        <div class="footer-content"></div>
       </div>
       <br>
-      <!--
       <div class="footer-footer">
         <p class="copy">
           &copy; 2023 Analytic CompStat | Todos os direitos reservados.
         </p>
       </div>
-      -->
     </footer>
 
   </body>

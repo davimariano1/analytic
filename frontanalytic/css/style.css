@@ -384,14 +384,25 @@ body {
 }
 
 .footer {
-  background: url("./novasimg\ \(10\).png") center/cover no-repeat;
+  background: url("novasimg10.png") center/cover no-repeat;
 }
 
-.footer img {
-  width: 160px;
+footer > div > div > img {
+  width: 100px;
+  margin-top: 10px;
 }
+
+/* */
+.footer-content-global {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-content: space-evenly;
+}
+/* */
 
 .footer-content {
+  width: calc(100% / 4);
   text-align: center;
   margin: 14px;
   color: #011624;
@@ -399,6 +410,12 @@ body {
   line-height: 1.5;
   vertical-align: middle;
 }
+
+.footer-footer{
+  width: 100%;
+  text-align: center;
+}
+
 
 .footer-container {
   display: flex;
@@ -409,10 +426,6 @@ body {
 .icon-footer {
   display: inline-block;
   margin: 5px;
-}
-
-.body-footer {
-
 }
 
 .icon-footer img {
