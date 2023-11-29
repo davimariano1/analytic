@@ -13,7 +13,12 @@
     <link rel="stylesheet" type="text/css" href="{% static './style.css' %}" />
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="{% static './jquery.mask.min.js' %}"></script>
-
+    <script src="{% static './index.js' %}"></script>
+    <script>
+      $(document).ready(function() {
+        $("#phone").mask("(00)00000-0000")
+      })
+    </script>
   </head>
 
   <body>
@@ -190,56 +195,54 @@
       <img class="contract-content-image" src="{% static './maosdadas.jpg' %}" alt="" />
       </div>
     </section>
+    
+    <div class="footer-divider"></div>
 
     <footer class="footer">
-      <div class="footer-divider"></div>
-      <div class="footer-content">
-        <img
-          src="{% static './LogoTransparente (3).png' %}"
-          alt="Logo da empresa onde o símbolo é um escudo"
-        />
-        <h4>Este é um produto:</h4>
-        <p>Softmig Software e Telecomunicações</p>
+      <div class="footer-content-global">
+        <div class="">
+          <h4>Um produto:</h4>
+          <img src="{% static './softmig_logo.png' %}" alt="logo softmig"
+            />
+        </div>
+        
+        <div class="">
+          <h4>Contato</h4>
+          <section class="social-media">
+            <a
+              class="icon-footer"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.instagram.com/sejasoftmig/"
+              ><img src="{% static './instagram footer.png' %}" alt="logo instagram"
+            /></a>
+            <a
+              class="icon-footer"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://api.whatsapp.com/send?phone=553132182710"
+              ><img src="{% static './whatsapp footer.png' %}" alt="logo whatsapp"
+            /></a>
+            <a
+              class="icon-footer"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="http://linkedin.com/company/softmig-software-e-telecomunicacoes"
+              ><img src="{% static './linkedin footer.png' %}" alt="logo linkedin"
+            /></a>
+          </section>
+          <p>Email: contato@analyticcompstat.com</p>
+        </div>
       </div>
-      <div class="footer-content">
-        <h4>Contato</h4>
-        <p>Email: contato@analyticcompstat.com</p>
-      </div>
-      <div class="footer-content"></div>
-      <div class="footer-content">
-        <section class="social-media">
-          <a
-            class="icon-footer"
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://www.instagram.com/sejasoftmig/"
-            ><img src="{% static './instagram footer.png' %}" alt="logo instagram"
-          /></a>
-          <a
-            class="icon-footer"
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://api.whatsapp.com/send?phone=553132182710"
-            ><img src="{% static './whatsapp footer.png' %}" alt="logo whatsapp"
-          /></a>
-          <a
-            class="icon-footer"
-            target="_blank"
-            rel="noopener noreferrer"
-            href="http://linkedin.com/company/softmig-software-e-telecomunicacoes"
-            ><img src="{% static './linkedin footer.png' %}" alt="logo linkedin"
-          /></a>
-        </section>
+      <br>
+      <!--
+      <div class="footer-footer">
         <p class="copy">
           &copy; 2023 Analytic CompStat | Todos os direitos reservados.
         </p>
       </div>
+      -->
     </footer>
-    <script src="{% static './index.js' %}"></script>
-    <script>
-      $(document).ready(function() {
-        $("#phone").mask("(00)00000-0000")
-      })
-    </script>
+
   </body>
 </html>
